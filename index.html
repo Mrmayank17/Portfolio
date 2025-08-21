@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayank Singh - Portfolio</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+
+    <nav id="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Mayank Singh</h1>
+            <p>Creative Web Developer</p>
+            <a href="#about" class="cta-button">Discover My Work</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="about" class="fade-in">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="profile-img"></div>
+                <div>
+                    <p>Hello! I'm a passionate developer and designer with a love for creating beautiful, functional
+                        digital experiences. With expertise in modern web technologies and a keen eye for design, I
+                        bring ideas to life through code.</p>
+                    <p>I believe in the power of clean code, intuitive design, and continuous learning. Whether it's
+                        building responsive websites, crafting user interfaces, or solving complex problems, I approach
+                        every project with creativity and attention to detail.</p>
+                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source
+                        projects, or enjoying a good cup of coffee while sketching out my next big idea.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="fade-in">
+            <h2>Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <span class="skill-icon">💻</span>
+                    <h3>Frontend Development</h3>
+                    <p>HTML, CSS, JavaScript, React</p>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">🎨</span>
+                    <h3>UI/UX Design</h3>
+                    <p>Figma, Photoshop</p>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">🗄️</span>
+                    <h3>Database</h3>
+                    <p>MongoDB</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="fade-in">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">💱</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Currency Converter App</h3>
+                        <p class="project-description">A modern, user-friendly currency converter that provides seamless
+                            currency conversion functionality.</p>
+                        <a href="https://yourcurrency-converter.netlify.app/" class="project-link" target="_blank">View Project →</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">📱</div>
+                    <div class="project-content">
+                        <h3 class="project-title">QR Code Generator</h3>
+                        <p class="project-description">QR Code Generator is a web application designed to simplify the creation of QR codes for text or URLs.</p>
+                        <a href="https://generate-qr-qr.netlify.app/" class="project-link" target="_blank">View Project →</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">📚</div>
+                    <div class="project-content">
+                        <h3 class="project-title">React Dictionary App</h3>
+                        <p class="project-description">YourDictionaryApp is a responsive web application built with React.js that serves as an English dictionary.</p>
+                        <a href="https://yourdictionaryapp.netlify.app/" class="project-link" target="_blank">View Project →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="fade-in">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <p>I'm always interested in new opportunities and exciting projects. Let's connect and create something
+                    amazing together!</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <h3>Email</h3>
+                        <a href="mailto:bhandarimayank2004@gmail.com" class="contact-link">bhandarimayank2004@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">💼</span>
+                        <h3>LinkedIn</h3>
+                        <a href="https://linkedin.com/in/mayank-singh-130882288" target="_blank" class="contact-link">linkedin.com/in/mayank-singh-130882288</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🐱</span>
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/Mrmayank17" target="_blank" class="contact-link">github.com/Mrmayank17</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mayank Singh. All rights reserved. Made with ❤️</p>
+        </div>
+    </footer>
+
+    <script>
+        // Loading screen
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                const loading = document.getElementById('loading');
+                loading.style.opacity = '0';
+                setTimeout(() => {
+                    loading.style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+
+        // Custom cursor
+        const cursor = document.getElementById('cursor');
+        let mouseX = 0, mouseY = 0;
+        let cursorX = 0, cursorY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursor.classList.add('active');
+        });
+
+        document.addEventListener('mouseleave', () => {
+            cursor.classList.remove('active');
+        });
+
+        function updateCursor() {
+            cursorX += (mouseX - cursorX) * 0.1;
+            cursorY += (mouseY - cursorY) * 0.1;
+            
+            cursor.style.left = cursorX - 10 + 'px';
+            cursor.style.top = cursorY - 10 + 'px';
+            
+            requestAnimationFrame(updateCursor);
+        }
+        updateCursor();
+
+        // Hide cursor on mobile
+        if (window.innerWidth <= 768) {
+            cursor.style.display = 'none';
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const target = document.querySelector(targetId);
+                
+                if (target) {
+                    const offsetTop = targetId === '#home' ? 0 : target.offsetTop - 80;
+                    
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Hover effects for interactive elements
+        document.querySelectorAll('.skill-card, .project-card, .contact-item').forEach(card => {
+            card.addEventListener('mouseenter', function () {
+                cursor.style.transform = 'scale(2)';
+                cursor.style.background = 'rgba(59, 130, 246, 0.5)';
+            });
+
+            card.addEventListener('mouseleave', function () {
+                cursor.style.transform = 'scale(1)';
+                cursor.style.background = 'rgba(59, 130, 246, 0.3)';
+            });
+        });
+
+        // Enhanced hover effects for links
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('mouseenter', function () {
+                cursor.style.transform = 'scale(2)';
+                cursor.style.background = 'rgba(59, 130, 246, 0.6)';
+            });
+
+            link.addEventListener('mouseleave', function () {
+                cursor.style.transform = 'scale(1)';
+                cursor.style.background = 'rgba(59, 130, 246, 0.3)';
+            });
+        });
+
+        console.log('Welcome to Mayank\'s professional portfolio!');
+    </script>
+</body>
+</html>
